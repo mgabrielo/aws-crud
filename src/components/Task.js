@@ -48,7 +48,7 @@ export default function Task({ task, fetchTask }) {
                 <Button variant='contained' onClick={() => setIsDialogOpen(true)}>
                     <EditIcon />
                 </Button>
-                <Button color='error' variant='contained' onCilck={handleDelete}>
+                <Button color='error' variant='contained' onClick={handleDelete}>
                     <DeleteIcon />
                 </Button>
             </div>
