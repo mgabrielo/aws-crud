@@ -23,8 +23,7 @@ export default function Task({ task, fetchTask }) {
         setIsComplete((prev) => !prev)
     }
 
-    async function handleDelete(e) {
-        e.preventDefault();
+    async function handleDelete() {
         try {
 
             await axios.delete(`${API_URL}/${id}`)
@@ -47,7 +46,7 @@ export default function Task({ task, fetchTask }) {
                 <Button variant='contained' onClick={() => setIsDialogOpen(true)}>
                     <EditIcon />
                 </Button>
-                <Button color='error' variant='contained' onCilck={handleDelete}>
+                <Button color='error' variant='contained' onCilck={() => handleDelete()}>
                     <DeleteIcon />
                 </Button>
             </div>
