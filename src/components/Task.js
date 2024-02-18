@@ -28,7 +28,7 @@ export default function Task({ task, fetchTask }) {
 
         try {
             console.log(id)
-            await axios.delete(API_URL, { params: id })
+            await axios.delete(`${API_URL}/${id}`)
             await fetchTask()
         } catch (error) {
             console.log(error)
