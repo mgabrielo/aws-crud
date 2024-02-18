@@ -18,7 +18,7 @@ export default function UpdateTaskForm({
 
         try {
             await axios.put(API_URL, { id, name: taskName, completed: completed })
-            // await fetchTask()
+            await fetchTask()
             setTaskName('')
             setIsDialogOpen(false)
         } catch (error) {
@@ -32,7 +32,7 @@ export default function UpdateTaskForm({
             <DialogTitle>Edit task</DialogTitle>
             <div className='dialog'>
                 <TextField size='small' label='Task' variant='outlined' onChange={(e) => setTaskName(e.target.value)} />
-                <Button variant='contained' onClick={() => handleUpdatetask}>
+                <Button variant='contained' onClick={handleUpdatetask}>
                     <CheckIcon />
                 </Button>
             </div>
