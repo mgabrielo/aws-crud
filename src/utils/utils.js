@@ -1,1 +1,1 @@
-export const API_URL = 'https://dbsf2jfvhonk25bjawwtssd2qq0crawj.lambda-url.eu-west-2.on.aws/task'
+export const API_URL = process.env.REACT_APP_AWS_API_URL
